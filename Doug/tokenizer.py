@@ -1,4 +1,5 @@
 import os
+import torch
 
 class Tokenizer:
     def __init__(self, vocab_file):

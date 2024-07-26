@@ -1,3 +1,5 @@
 torch
 datasets
 safetensors
+scikit-learn
+numpy
