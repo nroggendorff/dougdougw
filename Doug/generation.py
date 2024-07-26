@@ -45,4 +45,4 @@ def load_and_predict(model_path, tokenizer_path, text, max_length):
     
     return f'Input text: {text}\nPrediction probability: {prediction:.4f}\nPredicted class: {"positive" if prediction > 0.5 else "negative"}'
 
-print(load_and_predict("model.safetensors", "tokenizers", "happy birthday", max_length=128))
+print(load_and_predict("model.safetensors", "tokenizer", "happy birthday", max_length=128))
