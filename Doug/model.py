@@ -126,10 +126,10 @@ def evaluate(model, val_loader, criterion, device):
 dataset = load_dataset("nroggendorff/doug")
 
 vocab_size = 3200
-d_model = 512
-nhead = 16
-num_encoder_layers = 8
-dim_feedforward = 512
+d_model = 128
+nhead = 4
+num_encoder_layers = 2
+dim_feedforward = 128
 max_seq_length = 128
 
 model = Model(vocab_size, d_model, nhead, num_encoder_layers, dim_feedforward, max_seq_length)
@@ -168,7 +168,7 @@ model.to(device)
 criterion = nn.BCELoss()
 optimizer = Adam(model.parameters(), lr=1e-5)
 
-num_epochs = 32
+num_epochs = 8
 
 for epoch in range(num_epochs):
     train_loss = train(model, train_loader, optimizer, criterion, device)
