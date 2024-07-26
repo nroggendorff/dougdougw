@@ -4,10 +4,10 @@ import torch.nn as nn
 import math
 
 vocab_size = 3200
-d_model = 128
-nhead = 4
-num_encoder_layers = 2
-dim_feedforward = 128
+d_model = 512
+nhead = 8
+num_encoder_layers = 4
+dim_feedforward = 256
 max_seq_length = 128
 
 class PositionalEncoding(nn.Module):
